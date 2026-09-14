@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Houshmand Hesab</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+    <string name="confirm">Confirm</string>
+    <string name="done">Done</string>
+    <string name="today">Today</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
+    <string name="select">Select</string>
+    <string name="retry">Retry</string>
+    <string name="share">Share</string>
+    <string name="view_all">View all</string>
+    <string name="no_data">Nothing here yet</string>
+    <string name="unknown_category">Uncategorized</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_transactions">Transactions</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_ai">AI</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">Total balance</string>
+    <string name="this_month_income">Income</string>
+    <string name="this_month_expense">Expense</string>
+    <string name="quick_add_expense">Expense</string>
+    <string name="quick_add_income">Income</string>
+    <string name="quick_transfer">Transfer</string>
+    <string name="quick_ai">AI</string>
+    <string name="spending_last_7_days">Last 7 days spending</string>
+    <string name="recent_transactions">Recent transactions</string>
+    <string name="my_accounts">My accounts</string>
+    <string name="savings_goals">Savings goals</string>
+    <string name="debts_loans">Debts &amp; loans</string>
+    <string name="manage_categories">Categories</string>
+    <string name="monthly_budgets">Budgets</string>
+    <string name="full_report">Full report</string>
+
+    <!-- Transactions -->
+    <string name="transactions_title">Transactions</string>
+    <string name="search_transactions">Search transactions…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_income">Income</string>
+    <string name="filter_expense">Expense</string>
+    <string name="filter_transfer">Transfer</string>
+    <string name="no_transactions">No transactions found</string>
+    <string name="delete_tx_confirm">Delete this transaction?</string>
+
+    <!-- Add / Edit -->
+    <string name="add_transaction">Add transaction</string>
+    <string name="edit_transaction">Edit transaction</string>
+    <string name="type_expense">Expense</string>
+    <string name="type_income">Income</string>
+    <string name="type_transfer">Transfer</string>
+    <string name="amount">Amount</string>
+    <string name="category">Category</string>
+    <string name="account">Account</string>
+    <string name="from_account">From account</string>
+    <string name="to_account">To account</string>
+    <string name="date">Date</string>
+    <string name="note">Note</string>
+    <string name="note_hint">e.g. lunch with friends</string>
+    <string name="attach_receipt">Attach receipt</string>
+    <string name="receipt_attached">Receipt attached</string>
+    <string name="remove_attachment">Remove</string>
+    <string name="amount_required">Enter an amount</string>
+    <string name="no_categories_hint">Create categories first</string>
+    <string name="suggest_category">Suggest with AI</string>
+    <string name="ai_suggesting">AI is thinking…</string>
+    <string name="transaction_saved">Transaction saved</string>
+    <string name="add_category_first">Add a category first</string>
+    <string name="select_account_first">Select an account first</string>
+
+    <!-- Accounts -->
+    <string name="accounts_title">Accounts</string>
+    <string name="add_account">Add account</string>
+    <string name="account_name">Account name</string>
+    <string name="account_cash">Cash</string>
+    <string name="account_bank">Bank</string>
+    <string name="account_wallet">Wallet</string>
+    <string name="initial_balance">Initial balance</string>
+    <string name="delete_account_confirm">Delete this account and keep its transactions?</string>
+
+    <!-- Categories -->
+    <string name="categories_title">Categories</string>
+    <string name="categories_income">Income</string>
+    <string name="categories_expense">Expense</string>
+    <string name="add_category">Add category</string>
+    <string name="category_name">Category name</string>
+    <string name="choose_icon">Icon</string>
+    <string name="choose_color">Color</string>
+    <string name="delete_category_confirm">Delete this category?</string>
+
+    <!-- Budgets -->
+    <string name="budgets_title">Budgets</string>
+    <string name="add_budget">Add budget</string>
+    <string name="budget_limit">Monthly limit</string>
+    <string name="budget_spent">Spent</string>
+    <string name="budget_remaining">Remaining</string>
+    <string name="budget_over">Over budget!</string>
+    <string name="no_budgets">No budgets yet. Set limits for your categories.</string>
+    <string name="select_category">Select category</string>
+
+    <!-- Goals -->
+    <string name="goals_title">Savings goals</string>
+    <string name="add_goal">New goal</string>
+    <string name="goal_title">Goal title</string>
+    <string name="target_amount">Target amount</string>
+    <string name="saved_amount">Saved</string>
+    <string name="deadline">Deadline</string>
+    <string name="goal_reached">Goal reached! 🎉</string>
+    <string name="add_money">Add funds</string>
+    <string name="no_goals">No goals yet. Start saving for something you love.</string>
+
+    <!-- Debts -->
+    <string name="debts_title">Debts &amp; loans</string>
+    <string name="i_owe">I owe</string>
+    <string name="owed_to_me">Owed to me</string>
+    <string name="person_name">Person</string>
+    <string name="debt_amount">Amount</string>
+    <string name="due_date">Due date</string>
+    <string name="mark_settled">Settle</string>
+    <string name="settled">Settled</string>
+    <string name="add_debt">Add debt</string>
+    <string name="no_debts">No debts. Nice!</string>
+
+    <!-- Reports -->
+    <string name="reports_title">Reports</string>
+    <string name="by_category">By category</string>
+    <string name="monthly_trend">6-month trend</string>
+    <string name="avg_daily_expense">Avg daily expense</string>
+    <string name="biggest_expense">Biggest expense</string>
+    <string name="tx_count">Transactions</string>
+    <string name="no_data_report">No data for this period</string>
+    <string name="income_vs_expense">Income vs expense</string>
+
+    <!-- AI -->
+    <string name="ai_title">AI Accountant</string>
+    <string name="ai_greeting">Hi! I\'m your smart accountant 🤖\nAsk me anything about your money.</string>
+    <string name="ai_hint_message">Ask about your spending…</string>
+    <string name="ai_quick_analysis">Analyze this month</string>
+    <string name="ai_quick_saving">How can I save more?</string>
+    <string name="ai_quick_waste">Where am I wasting money?</string>
+    <string name="ai_thinking">Thinking…</string>
+    <string name="ai_needs_setup">To use the AI accountant, add your free Cloudflare AI credentials in Settings.</string>
+    <string name="ai_setup_now">Open settings</string>
+    <string name="ai_error">AI request failed. Check your connection and credentials.</string>
+    <string name="ai_send">Send</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme_system">System</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="persian_digits">Persian digits</string>
+    <string name="language">Language</string>
+    <string name="lang_system">System</string>
+    <string name="lang_fa">Persian</string>
+    <string name="lang_en">English</string>
+    <string name="currency_symbol">Currency label</string>
+    <string name="ai_settings">AI (Cloudflare Workers AI)</string>
+    <string name="cloudflare_account_id">Cloudflare Account ID</string>
+    <string name="cloudflare_api_token">Cloudflare API Token</string>
+    <string name="ai_model">Model</string>
+    <string name="security">Security</string>
+    <string name="enable_lock">App lock (PIN)</string>
+    <string name="change_pin">Change PIN</string>
+    <string name="enter_pin">Enter a 4–6 digit PIN</string>
+    <string name="biometric_unlock">Fingerprint unlock</string>
+    <string name="data">Data</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="backup_json">Backup (JSON)</string>
+    <string name="restore_json">Restore from backup</string>
+    <string name="clear_all_data">Clear all data</string>
+    <string name="clear_all_confirm">Delete ALL data? This cannot be undone.</string>
+    <string name="about">About</string>
+    <string name="about_text">Houshmand Hesab — your smart personal accountant.\nAll data stays on your device.</string>
+    <string name="saved">Saved</string>
+    <string name="restore_done">Data restored</string>
+    <string name="pin_set">PIN updated</string>
+    <string name="pin_mismatch">PINs do not match</string>
+    <string name="confirm_pin">Confirm PIN</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_enabled">Daily alerts &amp; reminders</string>
+
+    <!-- Lock -->
+    <string name="lock_title">Houshmand Hesab is locked</string>
+    <string name="wrong_pin">Wrong PIN</string>
+    <string name="unlock_with_biometric">Use fingerprint</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Financial alerts</string>
+    <string name="notif_channel_desc">Budget and debt reminders</string>
+    <string name="notif_budget_title">Budget alert</string>
+    <string name="notif_debt_title">Debt reminder</string>
+</resources>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">هوشمند حساب</string>
+
+    <!-- Common -->
+    <string name="ok">باشه</string>
+    <string name="cancel">انصراف</string>
+    <string name="save">ذخیره</string>
+    <string name="delete">حذف</string>
+    <string name="edit">ویرایش</string>
+    <string name="close">بستن</string>
+    <string name="confirm">تأیید</string>
+    <string name="done">تمام</string>
+    <string name="today">امروز</string>
+    <string name="add">افزودن</string>
+    <string name="search">جستجو</string>
+    <string name="select">انتخاب</string>
+    <string name="retry">تلاش دوباره</string>
+    <string name="share">اشتراک‌گذاری</string>
+    <string name="view_all">مشاهده همه</string>
+    <string name="no_data">فعلاً چیزی اینجا نیست</string>
+    <string name="unknown_category">بدون دسته</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_home">خانه</string>
+    <string name="nav_transactions">تراکنش‌ها</string>
+    <string name="nav_reports">گزارش‌ها</string>
+    <string name="nav_ai">هوشمند</string>
+    <string name="nav_settings">تنظیمات</string>
+
+    <!-- Dashboard -->
+    <string name="total_balance">موجودی کل</string>
+    <string name="this_month_income">درآمد</string>
+    <string name="this_month_expense">هزینه</string>
+    <string name="quick_add_expense">هزینه</string>
+    <string name="quick_add_income">درآمد</string>
+    <string name="quick_transfer">انتقال</string>
+    <string name="quick_ai">هوشمند</string>
+    <string name="spending_last_7_days">خرج ۷ روز اخیر</string>
+    <string name="recent_transactions">تراکنش‌های اخیر</string>
+    <string name="my_accounts">حساب‌های من</string>
+    <string name="savings_goals">اهداف پس‌انداز</string>
+    <string name="debts_loans">بدهی و قسط</string>
+    <string name="manage_categories">دسته‌ها</string>
+    <string name="monthly_budgets">بودجه‌ها</string>
+    <string name="full_report">گزارش کامل</string>
+
+    <!-- Transactions -->
+    <string name="transactions_title">تراکنش‌ها</string>
+    <string name="search_transactions">جستجوی تراکنش…</string>
+    <string name="filter_all">همه</string>
+    <string name="filter_income">درآمد</string>
+    <string name="filter_expense">هزینه</string>
+    <string name="filter_transfer">انتقال</string>
+    <string name="no_transactions">تراکنشی پیدا نشد</string>
+    <string name="delete_tx_confirm">این تراکنش حذف شود؟</string>
+
+    <!-- Add / Edit -->
+    <string name="add_transaction">ثبت تراکنش</string>
+    <string name="edit_transaction">ویرایش تراکنش</string>
+    <string name="type_expense">هزینه</string>
+    <string name="type_income">درآمد</string>
+    <string name="type_transfer">انتقال</string>
+    <string name="amount">مبلغ</string>
+    <string name="category">دسته</string>
+    <string name="account">حساب</string>
+    <string name="from_account">از حساب</string>
+    <string name="to_account">به حساب</string>
+    <string name="date">تاریخ</string>
+    <string name="note">یادداشت</string>
+    <string name="note_hint">مثلاً ناهار با دوستان</string>
+    <string name="attach_receipt">پیوست رسید</string>
+    <string name="receipt_attached">رسید پیوست شد</string>
+    <string name="remove_attachment">حذف</string>
+    <string name="amount_required">مبلغ را وارد کنید</string>
+    <string name="no_categories_hint">اول دسته بسازید</string>
+    <string name="suggest_category">پیشنهاد با هوش مصنوعی</string>
+    <string name="ai_suggesting">در حال فکر کردن…</string>
+    <string name="transaction_saved">تراکنش ذخیره شد</string>
+    <string name="add_category_first">اول ی دسته اضافه کنید</string>
+    <string name="select_account_first">اول حساب انتخاب کنید</string>
+
+    <!-- Accounts -->
+    <string name="accounts_title">حساب‌ها</string>
+    <string name="add_account">حساب جدید</string>
+    <string name="account_name">نام حساب</string>
+    <string name="account_cash">نقد</string>
+    <string name="account_bank">بانک</string>
+    <string name="account_wallet">کیف پول</string>
+    <string name="initial_balance">موجودی اولیه</string>
+    <string name="delete_account_confirm">این حساب حذف شود؟ (تراکنش‌ها باقی می‌مانند)</string>
+
+    <!-- Categories -->
+    <string name="categories_title">دسته‌ها</string>
+    <string name="categories_income">درآمد</string>
+    <string name="categories_expense">هزینه</string>
+    <string name="add_category">دسته جدید</string>
+    <string name="category_name">نام دسته</string>
+    <string name="choose_icon">آیکون</string>
+    <string name="choose_color">رنگ</string>
+    <string name="delete_category_confirm">این دسته حذف شود؟</string>
+
+    <!-- Budgets -->
+    <string name="budgets_title">بودجه‌ها</string>
+    <string name="add_budget">بودجه جدید</string>
+    <string name="budget_limit">سقف ماهانه</string>
+    <string name="budget_spent">خرج‌شده</string>
+    <string name="budget_remaining">باقی‌مانده</string>
+    <string name="budget_over">از بودجه رد شدی!</string>
+    <string name="no_budgets">هنوز بودجه‌ای نداری. برای دسته‌هات سقف تعیین کن.</string>
+    <string name="select_category">انتخاب دسته</string>
+
+    <!-- Goals -->
+    <string name="goals_title">اهداف پس‌انداز</string>
+    <string name="add_goal">هدف جدید</string>
+    <string name="goal_title">عنوان هدف</string>
+    <string name="target_amount">مبلغ هدف</string>
+    <string name="saved_amount">پس‌اندازشده</string>
+    <string name="deadline">مهلت</string>
+    <string name="goal_reached">هدف محقق شد! 🎉</string>
+    <string name="add_money">افزودن پول</string>
+    <string name="no_goals">هنوز هدفی نداری. برای ی چیزی که دوست داری پس‌انداز کن.</string>
+
+    <!-- Debts -->
+    <string name="debts_title">بدهی و قسط</string>
+    <string name="i_owe">من بدهکارم</string>
+    <string name="owed_to_me">بدهکار من</string>
+    <string name="person_name">شخص</string>
+    <string name="debt_amount">مبلغ</string>
+    <string name="due_date">سررسید</string>
+    <string name="mark_settled">تسویه</string>
+    <string name="settled">تسویه‌شده</string>
+    <string name="add_debt">بدهی جدید</string>
+    <string name="no_debts">بدهی نداری. چه عالی!</string>
+
+    <!-- Reports -->
+    <string name="reports_title">گزارش‌ها</string>
+    <string name="by_category">بر اساس دسته</string>
+    <string name="monthly_trend">روند ۶ ماه</string>
+    <string name="avg_daily_expense">میانگین خرج روزانه</string>
+    <string name="biggest_expense">بزرگ‌ترین هزینه</string>
+    <string name="tx_count">تعداد تراکنش</string>
+    <string name="no_data_report">برای این بازه داده‌ای نیست</string>
+    <string name="income_vs_expense">درآمد در برابر هزینه</string>
+
+    <!-- AI -->
+    <string name="ai_title">حسابدار هوشمند</string>
+    <string name="ai_greeting">سلام! من حسابدار هوشمند توئم 🤖\nهر سوالی درباره پولهات داری بپرس.</string>
+    <string name="ai_hint_message">درباره خرجهات بپرس…</string>
+    <string name="ai_quick_analysis">این ماه رو تحلیل کن</string>
+    <string name="ai_quick_saving">چطور بیشتر پس‌انداز کنم؟</string>
+    <string name="ai_quick_waste">کجا دارم پول هدر میدم؟</string>
+    <string name="ai_thinking">در حال فکر کردن…</string>
+    <string name="ai_needs_setup">برای استفاده از حسابدار هوشمند، اطلاعات رایگان Cloudflare AI رو تو تنظیمات وارد کن.</string>
+    <string name="ai_setup_now">رفتن به تنظیمات</string>
+    <string name="ai_error">درخواست هوش مصنوعی ناموفق بود. اتصال اینترنت و اطلاعات را بررسی کن.</string>
+    <string name="ai_send">ارسال</string>
+
+    <!-- Settings -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="appearance">ظاهر</string>
+    <string name="theme_system">سیستمی</string>
+    <string name="theme_dark">تیره</string>
+    <string name="theme_light">روشن</string>
+    <string name="persian_digits">اعداد فارسی</string>
+    <string name="language">زبان</string>
+    <string name="lang_system">سیستمی</string>
+    <string name="lang_fa">فارسی</string>
+    <string name="lang_en">انگلیسی</string>
+    <string name="currency_symbol">واحد پول</string>
+    <string name="ai_settings">هوش مصنوعی (Cloudflare Workers AI)</string>
+    <string name="cloudflare_account_id">شناسه حساب Cloudflare</string>
+    <string name="cloudflare_api_token">توکن API کلادفلر</string>
+    <string name="ai_model">مدل</string>
+    <string name="security">امنیت</string>
+    <string name="enable_lock">قفل اپ (PIN)</string>
+    <string name="change_pin">تغییر PIN</string>
+    <string name="enter_pin">PIN چهار تا شش رقمی وارد کن</string>
+    <string name="biometric_unlock">باز کردن با اثر انگشت</string>
+    <string name="data">داده‌ها</string>
+    <string name="export_csv">خروجی CSV</string>
+    <string name="backup_json">پشتیبان‌گیری (JSON)</string>
+    <string name="restore_json">بازیابی از پشتیبان</string>
+    <string name="clear_all_data">پاک کردن همه داده‌ها</string>
+    <string name="clear_all_confirm">همه داده‌ها حذف بشن؟ این کار قابل بازگشت نیست.</string>
+    <string name="about">درباره</string>
+    <string name="about_text">هوشمند حساب — حسابدار شخصی و هوشمند تو.\nهمه داده‌ها فقط روی گوشی خودت ذخیره میشه.</string>
+    <string name="saved">ذخیره شد</string>
+    <string name="restore_done">اطلاعات بازیابی شد</string>
+    <string name="pin_set">PIN به‌روزرسانی شد</string>
+    <string name="pin_mismatch">PINها یکسان نیستند</string>
+    <string name="confirm_pin">تکرار PIN</string>
+    <string name="notifications">اعلان‌ها</string>
+    <string name="notifications_enabled">هشدار روزانه و یادآوری‌ها</string>
+
+    <!-- Lock -->
+    <string name="lock_title">هوشمند حساب قفل است</string>
+    <string name="wrong_pin">PIN اشتباه است</string>
+    <string name="unlock_with_biometric">باز کردن با اثر انگشت</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">هشدارهای مالی</string>
+    <string name="notif_channel_desc">یادآوری بودجه و بدهی</string>
+    <string name="notif_budget_title">هشدار بودجه</string>
+    <string name="notif_debt_title">یادآوری بدهی</string>
+</resources>
