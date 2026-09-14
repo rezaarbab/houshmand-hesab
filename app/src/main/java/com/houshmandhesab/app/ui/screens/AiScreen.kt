@@ -176,10 +176,11 @@ fun AiScreen(
                 R.string.ai_quick_saving,
                 R.string.ai_quick_waste
             ).forEach { res ->
+                val chipText = stringResource(res)
                 androidx.compose.material3.AssistChip(
-                    onClick = { viewModel.send(stringResource(res)) },
+                    onClick = { viewModel.send(chipText) },
                     label = {
-                        Text(stringResource(res), style = MaterialTheme.typography.labelSmall, maxLines = 1)
+                        Text(chipText, style = MaterialTheme.typography.labelSmall, maxLines = 1)
                     }
                 )
             }

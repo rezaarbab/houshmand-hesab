@@ -7,8 +7,6 @@ import com.houshmandhesab.app.util.Jalali
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
-import java.time.Instant
-import java.time.ZoneId
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -48,11 +46,7 @@ class AiRepository @Inject constructor(
     }
 
     suspend fun chat(history: List<ChatMessage>, userMessage: String): Result<String> {
-        val system = buildString {
-            append(SYSTEM_PROMPT)
-            append("\n\n")
-            append(financeContext())
-        }
+        val system = SYSTEM_PROMPT + "\n\n" + financeContext()
         val messages = buildList {
             add(ChatMessage("system", system))
             addAll(history.takeLast(8).filter { it.role != "system" })
@@ -64,20 +58,20 @@ class AiRepository @Inject constructor(
     suspend fun suggestCategory(note: String, categories: List<Category>): Result<String> {
         if (categories.isEmpty()) return Result.failure(IllegalStateException("no categories"))
         val names = categories.joinToString(" | ") { it.name }
-        val prompt = "یادداشت این تراکنش: «$note»\n" +
-            "لیست دسته‌ها: $names\n" +
-            "فقط و فقط اسم مناسب‌ترین دسته از لیست بالا را بنویس. هیچ توضیح اضافه‌ای ننویس."
+        val prompt = "Transaction note: \"" + note + "\"\n" +
+            "Categories: " + names + "\n" +
+            "Reply with ONLY the best matching category name from the list above. No extra words."
         return runMessages(
             listOf(
-                ChatMessage("system", "تو یک دسته‌بندی‌کننده تراکنش هستی. فقط اسم یکی از دسته‌های داده‌شده را خروجی بده."),
+                ChatMessage("system", "You are a transaction classifier. Output only one category name from the provided list."),
                 ChatMessage("user", prompt)
             )
         )
     }
 
     suspend fun financeContext(): String {
-        val (jy, jm) = wallet.currentMonth()
-        val (from, to) = wallet.monthRange(jy, jm)
+        val today = Jalali.today()
+        val (from, to) = wallet.monthRange(today.jy, today.jm)
         val totals = wallet.monthTotals(from, to).first() ?: MonthTotals(0, 0)
         val topCats = wallet.categoryTotals("EXPENSE", from, to).first().take(6)
         val accounts = wallet.accounts().first()
@@ -89,41 +83,43 @@ class AiRepository @Inject constructor(
         val accNames = accounts.associate { it.id to it.name }
 
         return buildString {
-            append("داده‌های مالی کاربر:\n")
-            append("- موجودی کل: $totalBalance\n")
-            append("- درآمد این ماه: ${totals.income}\n")
-            append("- هزینه این ماه: ${totals.expense}\n")
+            append("User financial data:\n")
+            append("- Total balance: ").append(totalBalance).append("\n")
+            append("- This month income: ").append(totals.income).append("\n")
+            append("- This month expense: ").append(totals.expense).append("\n")
             if (topCats.isNotEmpty()) {
-                append("- بیشترین دسته‌های خرج این ماه: ")
-                append(topCats.joinToString("، ") { "${it.name ?: "بدون دسته"} (${it.total})" })
+                append("- Top expense categories this month: ")
+                append(topCats.joinToString(", ") { (it.name ?: "uncategorized") + " (" + it.total + ")" })
                 append("\n")
             }
             if (accounts.isNotEmpty()) {
-                append("- حساب‌ها: ")
-                append(accounts.joinToString("، ") { "${it.name}: ${balances[it.id] ?: 0L}" })
+                append("- Accounts: ")
+                append(accounts.joinToString(", ") { it.name + ": " + (balances[it.id] ?: 0L) })
                 append("\n")
             }
             if (recent.isNotEmpty()) {
-                append("- آخرین تراکنش‌ها:\n")
+                append("- Recent transactions:\n")
                 recent.forEach { tx ->
-                    val cat = tx.tx.categoryId?.let { catNames[it] } ?: "بدون دسته"
+                    val cat = tx.tx.categoryId?.let { catNames[it] } ?: "uncategorized"
                     val acc = accNames[tx.tx.accountId] ?: ""
-                    append("  * ${tx.tx.type} / $cat / ${tx.tx.amount} / $acc / ${tx.tx.note.ifBlank { "-" }}\n")
+                    append("  * ").append(tx.tx.type).append(" / ").append(cat)
+                        .append(" / ").append(tx.tx.amount).append(" / ").append(acc)
+                        .append(" / ").append(tx.tx.note.ifBlank { "-" }).append("\n")
                 }
             }
-            append("- تاریخ امروز (شمسی): ${Jalali.today().jy}/${Jalali.today().jm}/${Jalali.today().jd}\n")
+            append("- Today (Jalali): ").append(today).append("\n")
         }
     }
 
     companion object {
         val SYSTEM_PROMPT = """
-            تو «هوشمند حساب» هستی؛ یک حسابدار شخصی هوشمند و صمیمی.
-            قوانین پاسخ:
-            1. همیشه به زبان فارسی ساده و روان جواب بده.
-            2. جواب‌ها کوتاه، کاربردی و مرحله‌به‌مرحله باشند (حداکثر ۸ خط).
-            3. فقط بر اساس داده‌های مالی واقعی کاربر که در ابتدای این پیام آمده تحلیل کن؛ عدد از خودت نساز.
-            4. اگر پیشنهاد پس‌انداز می‌دهی، مبلغ دقیق و مشخص بگو.
-            5. لحن دوستانه داشته باش و حداکثر دو ایموجی استفاده کن.
+            You are the "Houshmand Hesab" app's smart personal accountant, chatting with a Persian-speaking user.
+            Rules:
+            1. Always respond in simple, fluent Persian (Farsi). Never respond in English.
+            2. Keep answers short, practical and step-by-step (max 8 lines).
+            3. Analyze ONLY based on the real financial data provided in this message; never invent numbers.
+            4. When suggesting savings, give exact amounts based on the user's data.
+            5. Be friendly; use at most two emojis.
         """.trimIndent()
     }
 }

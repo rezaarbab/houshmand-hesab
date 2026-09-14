@@ -202,7 +202,7 @@ private fun DebtCard(debt: Debt, persian: Boolean, currency: String, onSettle: (
                 Text(debt.person, style = MaterialTheme.typography.titleSmall)
                 Text(
                     stringResource(if (isMine) R.string.owed_to_me else R.string.i_owe) +
-                        if (debt.dueDate != null) " â€¢ " + Jalali.format(debt.dueDate!!, persian) else "",
+                        if (debt.dueDate != null) " • " + Jalali.format(debt.dueDate!!, persian) else "",
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -240,7 +240,7 @@ private fun DebtCard(debt: Debt, persian: Boolean, currency: String, onSettle: (
             }
         } else {
             Text(
-                "âœ“ " + stringResource(R.string.settled),
+                "✓ " + stringResource(R.string.settled),
                 style = MaterialTheme.typography.labelMedium,
                 color = IncomeGreen,
                 modifier = Modifier.padding(top = 6.dp)

@@ -1,4 +1,4 @@
-package com.houshmandhesab.app.util
+﻿package com.houshmandhesab.app.util
 
 import java.time.Instant
 import java.time.LocalDate
@@ -140,21 +140,24 @@ object Jalali {
     fun format(millis: Long, persianDigits: Boolean, zone: ZoneId = ZoneId.systemDefault()): String {
         val jd = fromMillis(millis, zone)
         val s = "%04d/%02d/%02d".format(jd.jy, jd.jm, jd.jd)
-        return if (persianDigits) toPersianDigits(s) else s
+        return if (persianDigits) Format.toPersianDigits(s) else s
     }
 
     fun formatLong(millis: Long, persianDigits: Boolean, zone: ZoneId = ZoneId.systemDefault()): String {
         val jd = fromMillis(millis, zone)
         val day = jd.jd.toString()
         val year = jd.jy.toString()
-        val text = "${monthName(jd.jm)} ${if (persianDigits) toPersianDigits(day) else day}، ${if (persianDigits) toPersianDigits(year) else year}"
+        val sep = "، "
+        val text = monthName(jd.jm) + " " +
+            (if (persianDigits) Format.toPersianDigits(day) else day) + sep +
+            (if (persianDigits) Format.toPersianDigits(year) else year)
         return text
     }
 
     fun localDateTimeString(millis: Long, persianDigits: Boolean, zone: ZoneId = ZoneId.systemDefault()): String {
         val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(millis), zone)
         val time = "%02d:%02d".format(ldt.hour, ldt.minute)
-        val t = if (persianDigits) toPersianDigits(time) else time
-        return "${format(millis, persianDigits, zone)} - $t"
+        val t = if (persianDigits) Format.toPersianDigits(time) else time
+        return format(millis, persianDigits, zone) + " - " + t
     }
 }
